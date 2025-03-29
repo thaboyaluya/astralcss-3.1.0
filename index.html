@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Create beautiful, responsive web interfaces effortlessly using our robust CSS components.">
+  <meta name="author" content="Rume Aluya">
+  <meta name="keywords" content="CSS Framework,Responsive Design,Web devlopment,Front-End Framework,UI Components,Grid System,CSS Library,Web design tool,Modern CSS Framework,Customizable Framework">  
+
+  <meta property="og:image" content="./astral showcase.png">
+  <meta property="og:image:width" content="1536" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:url" content="index.html" />
+  <meta property="og:title" content="Astral.CSS ">
+  <meta property="og:description" content="Create beautiful, responsive web interfaces effortlessly using our robust CSS components.">
+
+
+  <meta name="twitter:card" content="Create beautiful, responsive web interfaces effortlessly using our robust CSS components.">
+  <meta name="twitter:site" content="@AstralCSS">
+  <meta name="twitter:title" content="Astral.CSS Framework" />
+  <meta name="twitter:description" content="Create beautiful, responsive web interfaces effortlessly using our robust CSS components." />
+  <meta name="twitter:image" content="./astral showcase.png">
+
+
+  <meta name="msapplication-TileColor" content="#1ca0f2">
+  <meta name="theme-color" content="#1ca0f2">
+  <link rel="canonical" href="https://thaboyaluya.github.io/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_package_v0.16/favicon-32x32.png">
+  <link rel="mask-icon" href="./favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_package_v0.16/favicon-16x16.png">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/github.css">
+  <link rel="stylesheet" href="./css/doc.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Astral.CSS - Craft Beautiful Web Interfaces, One Class at a Time</title>
+</head>
+<body>
+
+  <style>
+    :root {
+    --primary: rgb(28, 160, 242);
+   
+    --primary-light: hsl(203, 89%, 55%);
+    --primary-dark: hsl(203, 89%, 40%);
+    --secondary: rgb(109, 118, 126);
+    --text-dark: hsl(222, 84%, 5%);
+    --text-light: hsl(210, 40%, 98%);
+    --text-muted: hsl(215, 16%, 47%);
+    --text-muted-light: hsl(215, 16%, 80%);
+    --background: hsl(210, 40%, 98%);
+    --background-dark: hsl(222, 84%, 5%);
+    --border-light: hsl(214, 32%, 91%);
+    --border-dark: hsl(217, 23%, 26%);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-color-dark: rgba(0, 0, 0, 0.3);
+    --radius: 0.75rem;
+    --transition: 0.3s ease;
+    --font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+
+
+
+
+
+/* Button Styles */
+.btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: all var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 4px 14px rgba(0, 0, 100, 0.15);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 100, 0.2);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--text-dark);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+    background-color: var(--border-light);
+    color: var(--text-dark);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+html[data-theme='dark'] .btn-secondary {
+    background-color: var(--border-dark);
+    color: var(--text-light);
+    border-color: var(--border-dark);
+}
+
+
+
+html[data-theme='dark'] .btn-secondary:hover {
+    background-color: hsl(217, 33%, 22%);
+}
+
+
+
+html[data-theme='dark'] code {
+    color: #e0e0e0;
+}
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #4361ee, #7209b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+
+
+html[data-theme='dark'] .nav-links a {
+    color: var(--text-light);
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--border-light);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+
+html[data-theme='dark'] .theme-toggle {
+    background-color: var(--border-dark);
+}
+
+.sun-icon {
+    display: none;
+    color: var(--text-dark);
+}
+
+.moon-icon {
+    display: block;
+    color: var(--text-dark);
+}
+
+html[data-theme='dark'] .sun-icon {
+    display: block;
+    color: var(--text-light);
+}
+
+html[data-theme='dark'] .moon-icon {
+    display: none;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+html[data-theme='dark'] .mobile-menu-btn {
+    color: var(--text-light);
+}
+
+/* Hero Section */
+.hero-main {
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    background: linear-gradient(to bottom right, rgba(67, 97, 238, 0.05), rgba(114, 9, 183, 0.05));
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-main::before, .hero-main::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.hero-main::before {
+    background-color: rgba(29, 161, 242,.5);
+    top: -100px;
+    left: -100px;
+    animation: pulse 6s infinite alternate;
+}
+
+.hero-main::after {
+    background-color: rgba(108, 117, 125,.5);
+    bottom: -100px;
+    right: -100px;
+    animation: pulseIn 8s infinite alternate;
+}
+
+@keyframes pulseIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+}
+
+.hero-main .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    animation: fadeUp 1s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.version-badge {
+    display: inline-block;
+    background-color: rgba(67, 97, 238, 0.1);
+    color: var(--primary);
+    padding: 0.375rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(67, 97, 238, 0.2);
+}
+
+.hero-main h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+@media (prefers-color-scheme: dark){
+    .btn-secondary {
+    background-color: var(--border-dark)  !important;
+    color: var(--text-light) !important;
+    border-color: var(--border-dark) !important;
+}
+.btn-secondary:hover {
+    background-color: hsl(217, 33%, 22%);
+}
+code {
+    color: #e0e0e0;
+}
+.nav-links a {
+    color: var(--text-light);
+}
+.subtitle {
+    color: var(--text-light);
+}
+
+}
+
+html[data-theme='dark'] .subtitle {
+    color: var(--text-light);
+}
+
+.description {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-code {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeIn 1s ease-out 0.3s backwards;
+    border: 1px solid var(--border-light);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+html[data-theme='dark'] .hero-code {
+    background-color: #1a1a1a;
+    border-color: var(--border-dark);
+}
+
+.code-header {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid var(--border-light);
+}
+code{
+  background: var(--code-bg) !important;
+}
+
+
+
+html[data-theme='dark'] .code-header {
+    background-color: #232323;
+    border-color: var(--border-dark);
+}
+
+.code-dots {
+    display: flex;
+    gap: 0.375rem;
+    margin-right: 1rem;
+}
+
+.code-dots span {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+}
+
+.code-dots span:nth-child(1) {
+    background-color: #ff5f56;
+}
+
+.code-dots span:nth-child(2) {
+    background-color: #ffbd2e;
+}
+
+.code-dots span:nth-child(3) {
+    background-color: #27c93f;
+}
+
+.code-title {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+pre {
+    margin: 0;
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+code {
+    font-family: monospace;
+    font-size: 0.875rem;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+
+
+body[data-theme='dark'] code {
+    color: #e0e0e0;
+}
+
+/* Section Styles */
+section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-badge {
+    display: inline-block;
+    background-color: rgba(67, 97, 238, 0.1);
+    color: var(--primary);
+    padding: 0.375rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(67, 97, 238, 0.2);
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Installation Section */
+.installation {
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+
+
+html[data-theme='dark'] .installation {
+    background-color: #121212;
+}
+
+.installation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+}
+
+
+
+html[data-theme='dark'] .installation::before {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.installation-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.installation-card {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-light);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.installation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+html[data-theme='dark'] .installation-card {
+    background-color: #1a1a1a;
+    border-color: var(--border-dark);
+}
+
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(67, 97, 238, 0.1);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.card-icon svg {
+    color: var(--primary);
+}
+
+.installation-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.installation-card p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.code-block {
+    background-color: var(--code-bg);
+    border-radius: 0.5rem;
+ 
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+html[data-theme='dark'] .code-block {
+    background-color: var(--code-bg);
+}
+
+.code-block code {
+    display: block;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 0.25rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: background-color var(--transition);
+}
+
+.copy-btn:hover {
+    background-color: white;
+}
+
+html[data-theme='dark'] .copy-btn {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--text-light);
+}
+
+html[data-theme='dark'] .copy-btn:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.info-card {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-light);
+}
+
+
+
+html[data-theme='dark'] .info-card {
+    background-color: #1a1a1a;
+    border-color: var(--border-dark);
+}
+
+.info-card h3 {
+    margin-bottom: 0.75rem;
+}
+
+.info-card p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Features Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-light);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+html[data-theme='dark'] .feature-card {
+    background-color: #1a1a1a;
+    border-color: var(--border-dark);
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(67, 97, 238, 0.1);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon svg {
+    color: var(--primary);
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+}
+
+/* Theme Showcase */
+.theme-showcase {
+    background: linear-gradient(to right, rgba(67, 97, 238, 0.05), rgba(114, 9, 183, 0.05));
+    border-radius: var(--radius);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    border: 1px solid rgba(67, 97, 238, 0.1);
+}
+
+.theme-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.theme-content p {
+    color: var(--text-muted);
+}
+
+.theme-examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.theme-example {
+    border-radius: var(--radius);
+    padding: 1rem;
+    text-align: center;
+}
+
+.theme-example.dark {
+    background-color: #121212;
+    border: 1px solid #2a2a2a;
+    color: white;
+}
+
+.theme-example.light {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    color: #121212;
+}
+
+.example-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.example-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.theme-example.dark .example-card {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+}
+
+.theme-example.light .example-card {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+}
+
+.card-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.card-text {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(to right, rgba(29, 161, 242,.1), rgba(108, 117, 125,.1));
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+}
+
+.cta p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: white;
+    border-top: 1px solid var(--border-light);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+html[data-theme='dark'] .footer {
+    background-color: #121212;
+    border-color: var(--border-dark);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-brand .footer-logo {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #4361ee, #7209b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+}
+
+.footer-links h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+html[data-theme='dark'] .footer-links h3 {
+    color: var(--text-light);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    transition: color var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-light);
+    padding-top: 2rem;
+    text-align: center;
+}
+
+html[data-theme='dark'] .footer-bottom {
+    border-color: var(--border-dark);
+}
+
+.footer-bottom p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Scroll to Top */
+#scroll-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--transition), transform var(--transition), background-color var(--transition);
+    z-index: 99;
+}
+
+#scroll-top:hover {
+    background-color: var(--primary-light);
+}
+
+#scroll-top.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .hero-main .container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .theme-showcase {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .installation-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path var(--transition);
+        border-bottom: 1px solid var(--border-light);
+    }
+    
+    body.dark-theme .nav-links {
+        background-color: #121212;
+        border-color: var(--border-dark);
+    }
+    
+    .nav-links.show {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .nav-links a {
+        padding: 1rem 2rem;
+        width: 100%;
+        display: block;
+    }
+    
+    .theme-toggle {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .theme-examples {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (prefers-color-scheme: dark){
+
+    :root {
+        --code-bg: #32383f;
+}
+    .btn-secondary {
+    background-color: var(--border-dark)  ;
+    color: var(--text-light) ;
+    border-color: var(--border-dark) ;
+}
+.btn-secondary:hover {
+    background-color: hsl(217, 33%, 22%);
+}
+
+.nav-links a {
+    color: var(--text-light);
+}
+.subtitle {
+    color: var(--text-light);
+}
+.hero-code {
+    background-color: #1a1a1a;
+    border-color: var(--border-dark);
+}
+.code-header {
+    background-color: #232323;
+    border-color: var(--border-dark);
+}
+.installation {
+    background-color: #121212;
+}
+
+.installation::before {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.installation-card {
+    background-color: #1a1a1a;
+    border-color: var(--border-dark);
+}
+.info-card {
+    background-color: #1a1a1a;
+    border-color: var(--border-dark);
+}
+
+.feature-card {
+    background-color: #1a1a1a;
+    border-color: var(--border-dark);
+}
+
+}
+
+
+
+</style>
+
+
+
+
+  <header class="flex items-center bg-color fixed-top justify-between px-5 py-3 ">
+    <div class="flex items-center gap-2">
+    <a title="Astral.CSS" class="flex" href="./index.html">
+    <img width="32px" height="32px" alt="Astal.CSS Logo" src="./favicon_package_v0.16/favicon-32x32.png">
+</a>
+</div>
+<nav class="flex items-center gap-5">
+<a title="Astral.CSS Documentation" class=" d-sm-inline-flex items-center gap-1 text-sm border-b menu-link " href="./documentation/get-started/introduction/get-started.html">Documentation</a>
+
+<details class="details-reset details-overlay">
+  <summary class="text-sm" id="js-cycle" aria-haspopup="true">
+ Version
+  </summary>
+  <div class="SelectMenu">
+  <div class="SelectMenu-modal w-auto">
+  <div class="SelectMenu-list ">
+  <a class="SelectMenu-item version-link" href="https://thaboyaluya.github.io/" target="_blank" rel="noopener noreferrer">Astral.CSS V3.0 ↗</a>
+
+  </div>
+  </div>
+  </div>
+  </details>
+<a title="Download Astral.CSS" href="https://github.com/thaboyaluya/astralcss/archive/refs/heads/master.zip" target="_blank" rel="noopener" class="d-sm-inline-flex  items-center gap-1 text-sm border-b menu-link ">
+<span class="text-sm">Download</span>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3"><path d="M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964 12.9621 2.30861C12.9861 2.36669 12.9996 2.4303 13 2.497L13 2.5V2.50049V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3.70711L6.85355 8.85355C6.65829 9.04882 6.34171 9.04882 6.14645 8.85355C5.95118 8.65829 5.95118 8.34171 6.14645 8.14645L11.2929 3H9.5C9.22386 3 9 2.77614 9 2.5C9 2.22386 9.22386 2 9.5 2H12.4999H12.5C12.5678 2 12.6324 2.01349 12.6914 2.03794C12.7504 2.06234 12.8056 2.09851 12.8536 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+</path>
+</svg>
+</a>
+
+
+
+<details class="details-reset details-overlay">
+<summary id="js-cycle" aria-haspopup="true">
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 cursor-pointer h-4"><path d="M7.5 0C7.77614 0 8 0.223858 8 0.5V2.5C8 2.77614 7.77614 3 7.5 3C7.22386 3 7 2.77614 7 2.5V0.5C7 0.223858 7.22386 0 7.5 0ZM2.1967 2.1967C2.39196 2.00144 2.70854 2.00144 2.90381 2.1967L4.31802 3.61091C4.51328 3.80617 4.51328 4.12276 4.31802 4.31802C4.12276 4.51328 3.80617 4.51328 3.61091 4.31802L2.1967 2.90381C2.00144 2.70854 2.00144 2.39196 2.1967 2.1967ZM0.5 7C0.223858 7 0 7.22386 0 7.5C0 7.77614 0.223858 8 0.5 8H2.5C2.77614 8 3 7.77614 3 7.5C3 7.22386 2.77614 7 2.5 7H0.5ZM2.1967 12.8033C2.00144 12.608 2.00144 12.2915 2.1967 12.0962L3.61091 10.682C3.80617 10.4867 4.12276 10.4867 4.31802 10.682C4.51328 10.8772 4.51328 11.1938 4.31802 11.3891L2.90381 12.8033C2.70854 12.9986 2.39196 12.9986 2.1967 12.8033ZM12.5 7C12.2239 7 12 7.22386 12 7.5C12 7.77614 12.2239 8 12.5 8H14.5C14.7761 8 15 7.77614 15 7.5C15 7.22386 14.7761 7 14.5 7H12.5ZM10.682 4.31802C10.4867 4.12276 10.4867 3.80617 10.682 3.61091L12.0962 2.1967C12.2915 2.00144 12.608 2.00144 12.8033 2.1967C12.9986 2.39196 12.9986 2.70854 12.8033 2.90381L11.3891 4.31802C11.1938 4.51328 10.8772 4.51328 10.682 4.31802ZM8 12.5C8 12.2239 7.77614 12 7.5 12C7.22386 12 7 12.2239 7 12.5V14.5C7 14.7761 7.22386 15 7.5 15C7.77614 15 8 14.7761 8 14.5V12.5ZM10.682 10.682C10.8772 10.4867 11.1938 10.4867 11.3891 10.682L12.8033 12.0962C12.9986 12.2915 12.9986 12.608 12.8033 12.8033C12.608 12.9986 12.2915 12.9986 12.0962 12.8033L10.682 11.3891C10.4867 11.1938 10.4867 10.8772 10.682 10.682ZM5.5 7.5C5.5 6.39543 6.39543 5.5 7.5 5.5C8.60457 5.5 9.5 6.39543 9.5 7.5C9.5 8.60457 8.60457 9.5 7.5 9.5C6.39543 9.5 5.5 8.60457 5.5 7.5ZM7.5 4.5C5.84315 4.5 4.5 5.84315 4.5 7.5C4.5 9.15685 5.84315 10.5 7.5 10.5C9.15685 10.5 10.5 9.15685 10.5 7.5C10.5 5.84315 9.15685 4.5 7.5 4.5Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+</svg>
+</summary>
+<div class="SelectMenu right-0">
+<div class="SelectMenu-modal w-auto">
+<div id="js-themes" class="SelectMenu-list js-themes">
+  <button data-scheme="light" class="SelectMenu-item is-active" role="menuitem">
+    Light Mode <span class="tag ml-5 tag--dark  cycle">active</span>
+  </button>
+  <button data-scheme="dark" class="SelectMenu-item" role="menuitem">
+    Dark Mode <span class="tag ml-5 tag--dark  cycle">active</span>
+  </button>
+  <button data-scheme="system" class="SelectMenu-item" role="menuitem">
+    System <span class="tag ml-5 tag--dark  cycle ">active</span>
+  </button>
+</div>
+</div>
+</div>
+</details>
+
+</nav>
+</header>
+
+
+
+<section class="hero-main">
+  <div class="container">
+      <div class="hero-content">
+          <div class="version-badge">Currently v3.1</div>
+          <h1>Astral.CSS</h1>
+          <p class="subtitle">Craft Beautiful Responsive Interfaces, One Class at a Time.</p>
+          <p class="description">Create beautiful, responsive web interfaces effortlessly using our robust CSS components.</p>
+          <div class="hero-buttons">
+              <a style="text-decoration: none;" href="https://github.com/thaboyaluya/astralcss/archive/refs/heads/master.zip" class="btn-primary">Download <i class="fa fa-download ml-2"></i></a>
+              <a style="text-decoration: none;" href="./documentation/get-started/introduction/get-started.html" class="btn-secondary">Documentation</a>
+          </div>
+      </div>
+      <div class="hero-code">
+          <div class="code-header">
+              <div class="code-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+              <div class="code-title">index.html</div>
+          </div>
+          <pre  style="border-radius: 0rem;"><code class="user-select-all">&lt;link href="https://cdn.jsdelivr.net/gh/thaboyaluya/astralcss@master/dist/css/astral.css-3.1.0.min.css" rel="stylesheet"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/thaboyaluya/astralcss@master/dist/js/astral%403.1.0.min.js"&gt;&lt;/script&gt;
+
+&lt;div class="container"&gt;
+&lt;div class="card"&gt;
+&lt;h2 class="card-title"&gt;Hello, Astral!&lt;/h2&gt;
+&lt;p class="card-text"&gt;Start building beautiful interfaces.&lt;/p&gt;
+&lt;button class="button"&gt;Get Started&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+  </div>
+</section>
+
+
+
+
+<section id="download" class="installation">
+  <div class="container">
+      <div class="section-header">
+          <span class="section-badge">Installation</span>
+          <h2>Get Started with Astral.CSS</h2>
+          <p>Choose the installation method that works best for your project.</p>
+      </div>
+      <div class="installation-cards">
+          <div class="installation-card">
+              <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+              </div>
+              <h3>NPM Installation</h3>
+              <p>Install Astral.CSS's source CSS and JavaScript files via npm.</p>
+              <div class="code-block">
+<figure class="highlight">
+<pre><code data-language="html">
+npm i astralcss-3.1
+</code></pre>
+<button data-clipboard-snippet class="button bd-copy"><i class="fa fa-copy p-1"></i></button>
+</figure>
+              </div>
+          </div>
+          <div class="installation-card">
+              <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3>jsDelivr CDN</h3>
+              <p>When you only need to include Astral.CSS's compiled CSS or JS, you can use jsDelivr.</p>
+<div class="code-block">
+<figure class="highlight">
+<pre><code data-language="html">
+&lt;link href="https://cdn.jsdelivr.net/gh/thaboyaluya/astralcss@master/dist/css/astral.css-3.1.0.min.css" rel="stylesheet"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/thaboyaluya/astralcss@master/dist/js/astral%403.1.0.min.js"&gt;&lt;/script&gt;
+</code></pre>
+<button data-clipboard-snippet class="button bd-copy"><i class="fa fa-copy p-1"></i></button>
+</figure>
+</div>
+
+          </div>
+      </div>
+      <div class="info-card">
+          <h3>Get started any way you want</h3>
+          <p  class="mb-2">You can dive right in and start building with Astral.CSS! Just choose the option that works best for you: use the CDN or download the source code directly.</p>
+          <a style="text-decoration: none;" title="Astral.CSS Installation" class="btn-primary" href="./documentation/get-started/download/download.html"><span class="mr-2">Read installation docs</span> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></a>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section id="features" class="features">
+  <div class="container">
+      <div class="section-header">
+          <span class="section-badge">Features</span>
+          <h2>Why Astral.CSS?</h2>
+          <p>Our framework is designed to make web development easier, faster, and more beautiful.</p>
+      </div>
+      <div class="features-grid">
+          <div class="feature-card">
+              <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+              <h3>Extensive Components Library</h3>
+              <p>Astral.CSS offers a well-rounded collection of UI components, making it easier for developers to simplify their workflow and craft beautiful designs without building everything from the ground up.</p>
+          </div>
+          <div class="feature-card">
+              <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              </div>
+              <h3>Fully Responsive Design</h3>
+              <p>Designed with a mobile-first approach, our framework ensures every component looks exceptional across all devices—be it desktop, tablet, or smartphone.</p>
+          </div>
+          <div class="feature-card">
+              <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+              </div>
+              <h3>Modern Architecture</h3>
+              <p>Enjoy a sleek, modern design that prioritizes user experience and keeps things simple for top-notch performance.</p>
+          </div>
+          <div class="feature-card">
+              <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg>
+              </div>
+              <h3>Easy Integration</h3>
+              <p>You'll find our framework easy to integrate into your existing projects, making it simple to mix and match components without any fuss.</p>
+          </div>
+      </div>
+
+ 
+      <div class="theme-showcase">
+       
+          <div class="theme-content">
+              <h3>Astral.CSS Dark Mode</h3>
+              <p>Effortlessly adapt between dark and light themes based on the user's preference, ensuring a browsing experience tailored to your needs.</p>
+              <a style="text-decoration: none;" title="Dark Mode" class="btn-primary" href="./documentation/dark mode/dark-mode.html"><span class="mr-2">Read dark docs</span> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></a>
+          </div>
+          <div class="theme-examples">
+              <div class="theme-example dark">
+                  <div class="example-label">Dark Theme</div>
+                  <div data-theme="dark" class="card">
+                      <div class="card-title">Card</div>
+                      <div class="card-body">
+                        <div class="card-text">I am a dark theme card</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="theme-example light">
+                  <div class="example-label">Light Theme</div>
+                  <div data-theme="light" class="card">
+                    <div class="card-title">Card</div>
+                    <div class="card-body">
+                      <div class="card-text">I am a light theme card</div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+                <div class="section text-center mt-40">
+                  <div class="section-header">
+                    <span class="section-badge">Usage</span>
+                    <h2>How It Works</h2>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-card">
+                      <h2 class="font-semibold fs-4">Download Astral.CSS Framework</h2>
+                      <p class=" py-2 fs-6 px-2 font-light ">
+                        Start your journey by downloading the Astral.CSS framework from our <a class="text-gray-500" style="text-decoration: underline !important" href="https://github.com/thaboyaluya/astral" target="_blank" rel="noopener"> GitHub repository.</a>  Explore a wide range of components, all readily available to streamline your web development experience.
+                      </p>
+                  </div>
+                  <div class="feature-card">
+                      <h2 class="font-semibold text-xl fs-4">Explore our Component Library</h2>
+                      <p class=" font-light fs-6 py-2 px-2 ">Explore our vast collection of frontend components, crafted to elevate your web development projects. From forms and cards to navigation bars, we have everything you need to bring your ideas to life!</p>
+                  </div>
+                  <div class="feature-card">
+                      <h3 class="font-semibold text-xl fs-4">Customize and Combine</h3>
+                      <p class=" font-light py-2 px-2 fs-6 ">Effortlessly tailor components to fit your project’s needs. With Astral.CSS, you have the tools to craft unique web interfaces that truly stand out.</p>
+                  </div>
+
+              </div>
+                </div>
+
+
+
+
+
+
+                <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="600" class="section text-center aos-init mt-40 aos-animate">
+                  <span class="section-badge">Toastify</span>
+                  <h2 class=" headline">Astral.CSS Toastify</h2>
+               <h3 class="mb-5 mt-3 fs-6 ">
+                  Astral.CSS offers a lightweight JavaScript notification module that makes it easy to display customizable toast messages on your webpage. Enjoy smooth CSS3 transitions for a sleek experience. Give it a try by clicking the buttons below!</h3>
+      
+                  <div class="d-flex gap-1 justify-content-center flex-sm-column flex-md-row">
+                    <button id="default" class="button button-primary">Default Toast</button>
+                    <button id="random" class="button button-secondary">Random Toast</button>
+                    <button id="success" class="button button-success">Success Toast</button>
+                    <button id="error" class="button button-error">Error Toast</button>
+                    <button id="warning" class="button button-warning">Warning Toast</button>
+                    <button id="info" class="button button-info">Info Toast</button>
+                  </div>
+             
+     
+                
+             
+      
+              <h3 class="fs-4">Features of Astral.CSS Toastify</h3>
+      
+              <ul class="list-unstyled text-is-left lead">
+                <li class="fs-5"> <i class="fa fa-check text-primary mr-2"></i>Easy to set up.</li>
+                <li class="fs-5"> <i class="fa fa-check text-primary mr-2"></i>Easy to customize</li>
+                <li class="fs-5"> <i class="fa fa-check text-primary mr-2"></i>Beautiful by default</li>
+                <li class="fs-5"> <i class="fa fa-check text-primary mr-2"></i>Super Responsive</li>
+                <li class="fs-5"> <i class="fa fa-check text-primary mr-2"></i>Fancy progress bar to display the remaining time</li>
+                <li class="fs-5"> <i class="fa fa-check text-primary mr-2"></i>Dark Mode obviously</li>
+                <li class="fs-5"> <i class="fa fa-check text-primary mr-2"></i>And much more!</li>
+              </ul>
+      
+      
+          
+          <a  style="text-decoration: none;" class="btn-primary" href="./documentation/javascript/toast/toastify.html"><span class="mr-2">Read Docs</span> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></a>
+      
+      
+                </div>
+
+
+                <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" class="section text-center aos-init mt-40 aos-animate">
+                  <span class="section-badge">OTP</span>
+                  <h2 class=" headline">Astral.js OTP Generator</h2>
+               <h3 class="mt-3 fs-6  md:text-lg">A minimal JavaScript one-time password (OTP) generator module in Astral.js, designed to provide an easy and efficient way to generate secure OTPs for your web application.</h3>
+      
+               <form class="block mx-auto">
+                <div class="form-field input-group">
+                      <input class="form-input" id="otpText" type="number" placeholder="Generate your first OTP..." readonly> 
+
+                      <button class="button" id="otpButton">GENERATE OTP</button>
+                      </div>
+                      <div class="form-field">
+                            <label for="membership">OTP Limit</label>
+                        <input required="" id="otpLimit"  class="form-range" type="range" min="1" max="6" step="1" value="4">
+      
+      
+                          </div>
+          </form>
+      
+      
+      
+      
+      
+      
+          <a style="text-decoration: none;" class="btn-primary" href="./documentation/javascript/otp generator/otp-generator.html"><span class="mr-2">Read Docs</span> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></a>
+      
+      
+                </div>
+
+
+
+
+                <section class="cta">
+                  <div class="container">
+                      <h2>Are you excited to take your web development to the next level?</h2>
+                      <p>Become part of the growing community of developers reshaping web interfaces with Astral.CSS.</p>
+                      <a style="text-decoration: none;" href="#download" class="btn-primary">Get Started Today</a>
+                  </div>
+              </section>
+
+
+                <button id="scroll-top" aria-label="Scroll to top" class="show">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+              </button>
+
+
+                <div class="border-top mt-20">
+                  <footer><div class="flex flex-col md:flex-row gap-3 items-center justify-between py-10  mx-auto text-sm px-5 ">
+                  <p class="mb-0">© 2025 <a class="footer-link" href="https://github.com/thaboyaluya/astral.css-V3.0/archive/refs/heads/master.zip" target="_blank" rel="noopener">Astral.CSS</a>. All rights reserved</p>
+                  <nav class="flex flex-sm-column flex-md-row align-items-center justify-content-center gap-5">
+                    <a class="footer-link" href="./documentation/get-started/introduction/get-started.html">Introduction</a>
+                    <a class="footer-link" href="./documentation/get-started/download/download.html">Download</a>
+                    <a class="footer-link" href="./documentation/utilities/typography/typography.html">Typography</a>
+                    <a class="footer-link" href="./documentation/javascript/toast/toastify.html">Toastify</a>
+                    <a class="footer-link" href="./documentation/javascript/otp generator/otp-generator.html">OTP Generator</a>
+                    <a class="footer-link" href="https://thaboyaluya.github.io/sitemap.xml">XML Sitemap</a>
+                  </nav>
+                  </div>
+              </footer>
+            </div>
+
+
+  <script src="./js/docs.js"></script>
+  <script src="./js/clipboard.min.js"></script>
+  <script src="./js/snippet.js"></script>
+  <script src="./js/rainbow.min.js"></script>
+  <script src="./js/aos.js"></script>
+  <script>AOS.init()</script>
+  <script>    
+    // Mobile menu toggle
+    //const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    //const navLinks = document.querySelector('.nav-links');
+    
+    // mobileMenuBtn.addEventListener('click', () => {
+    //     navLinks.classList.toggle('show');
+    // });
+    
+    // Scroll to top button
+
+    
+    // Copy button functionality
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    
+    copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const codeBlock = button.closest('.code-block').querySelector('code');
+            navigator.clipboard.writeText(codeBlock.textContent)
+                .then(() => {
+                    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                    setTimeout(() => {
+                        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+                    }, 2000);
+                });
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+
+

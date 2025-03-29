@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Astral.CSS - Modals </title>
+      <meta charset="utf-8">
+      <meta name="robots" content="index, follow">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A classic modal overlay allows you to include any content you desire, providing an engaging way to display information without navigating away from the  page.">
+      <meta name="author" content="Rume Aluya"><meta name="keywords" content="CSS Framework,Responsive Design,Web devlopment,Front-End Framework,UI Components,Grid System,CSS Library,Web design tool,Modern CSS Framework,Customizable Framework">   <meta property="og:image" content="./Screenshot (1).png">
+    <meta name="twitter:image" content="./Screenshot (1).png">
+      
+      <meta property="og:title" content="Astral.CSS ">
+      <meta property="og:description" content="A classic modal overlay allows you to include any content you desire, providing an engaging way to display information without navigating away from the  page.">
+      <meta name="twitter:card" content="A classic modal overlay allows you to include any content you desire, providing an engaging way to display information without navigating away from the  page.">
+      <meta name="twitter:site" content="@AstralCSS">
+      <meta name="twitter:creator" content="@thaboyaluya">
+        <meta property="og:image" content="./astral showcase.png">
+  <meta property="og:image:width" content="1536" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:url" content="index.html" />
+  <meta property="og:title" content="Astral.CSS ">
+  <meta property="og:description" content="Create beautiful, responsive web interfaces effortlessly using our robust CSS components.">
+
+
+  <meta name="twitter:card" content="Create beautiful, responsive web interfaces effortlessly using our robust CSS components.">
+  <meta name="twitter:site" content="@AstralCSS">
+  <meta name="twitter:title" content="Astral.CSS Framework" />
+  <meta name="twitter:description" content="Create beautiful, responsive web interfaces effortlessly using our robust CSS components." />
+  <meta name="twitter:image" content="./astral showcase.png"><link rel="apple-touch-icon" sizes="180x180" href="../../../../favicon_package_v0.16/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../../favicon_package_v0.16/favicon-32x32.png">
+
+<link rel="mask-icon" href="../../../../favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#1ca0f2">
+<meta name="theme-color" content="#1ca0f2">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicon_package_v0.16/favicon-16x16.png">
+	<link rel="stylesheet" href="../../../../css/github.css">
+      <link rel="stylesheet" href="../../../../css/doc.css">
+      <link rel="stylesheet" href="../../../../css/font-awesome.min.css">
+    
+</head>
+<body>
+
+
+  <header class="header">
+		<div class="container-blur"></div>
+		<div class="flex items-center justify-between px-5 py-3 bg-color">
+			<div class="flex items-center gap-2">
+				<a title="Astral.CSS" class="flex" href="../../../index.html">
+					<img width="32px" height="32px" alt="Astal.CSS Logo" src="../../../favicon_package_v0.16/favicon-32x32.png">
+				</a>
+			</div>
+			<nav class=" hidden d-md-flex  gap-5">
+				<a title="Astral.CSS Documentation" class="d-sm-inline-flex items-center gap-1 text-sm border-b menu-link " href="../../../documentation/get-started/introduction/get-started.html">Documentation</a>
+				<details class="details-reset details-overlay">
+					<summary class="text-sm" id="js-cycle" aria-haspopup="true">Version
+	  </summary>
+					<div class="SelectMenu">
+						<div class="SelectMenu-modal w-auto">
+							<div class="SelectMenu-list ">
+								<a class="SelectMenu-item version-link" href="" target="_blank" rel="noopener noreferrer">Astral.CSS V3.0 ↗</a>
+							</div>
+						</div>
+					</div>
+				</details>
+				<a title="Download Astral.CSS" href="https://github.com/thaboyaluya/astral.css-V3.0/archive/refs/heads/master.zip" target="_blank" rel="noopener" class="d-sm-inline-flex  items-center gap-1 text-sm border-b menu-link ">
+					<span class="text-sm">Download</span>
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3">
+						<path d="M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964 12.9621 2.30861C12.9861 2.36669 12.9996 2.4303 13 2.497L13 2.5V2.50049V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3.70711L6.85355 8.85355C6.65829 9.04882 6.34171 9.04882 6.14645 8.85355C5.95118 8.65829 5.95118 8.34171 6.14645 8.14645L11.2929 3H9.5C9.22386 3 9 2.77614 9 2.5C9 2.22386 9.22386 2 9.5 2H12.4999H12.5C12.5678 2 12.6324 2.01349 12.6914 2.03794C12.7504 2.06234 12.8056 2.09851 12.8536 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+					</svg>
+				</a>
+				<details class="details-reset details-overlay">
+					<summary id="js-cycle" aria-haspopup="true">
+						<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 cursor-pointer h-4">
+							<path d="M7.5 0C7.77614 0 8 0.223858 8 0.5V2.5C8 2.77614 7.77614 3 7.5 3C7.22386 3 7 2.77614 7 2.5V0.5C7 0.223858 7.22386 0 7.5 0ZM2.1967 2.1967C2.39196 2.00144 2.70854 2.00144 2.90381 2.1967L4.31802 3.61091C4.51328 3.80617 4.51328 4.12276 4.31802 4.31802C4.12276 4.51328 3.80617 4.51328 3.61091 4.31802L2.1967 2.90381C2.00144 2.70854 2.00144 2.39196 2.1967 2.1967ZM0.5 7C0.223858 7 0 7.22386 0 7.5C0 7.77614 0.223858 8 0.5 8H2.5C2.77614 8 3 7.77614 3 7.5C3 7.22386 2.77614 7 2.5 7H0.5ZM2.1967 12.8033C2.00144 12.608 2.00144 12.2915 2.1967 12.0962L3.61091 10.682C3.80617 10.4867 4.12276 10.4867 4.31802 10.682C4.51328 10.8772 4.51328 11.1938 4.31802 11.3891L2.90381 12.8033C2.70854 12.9986 2.39196 12.9986 2.1967 12.8033ZM12.5 7C12.2239 7 12 7.22386 12 7.5C12 7.77614 12.2239 8 12.5 8H14.5C14.7761 8 15 7.77614 15 7.5C15 7.22386 14.7761 7 14.5 7H12.5ZM10.682 4.31802C10.4867 4.12276 10.4867 3.80617 10.682 3.61091L12.0962 2.1967C12.2915 2.00144 12.608 2.00144 12.8033 2.1967C12.9986 2.39196 12.9986 2.70854 12.8033 2.90381L11.3891 4.31802C11.1938 4.51328 10.8772 4.51328 10.682 4.31802ZM8 12.5C8 12.2239 7.77614 12 7.5 12C7.22386 12 7 12.2239 7 12.5V14.5C7 14.7761 7.22386 15 7.5 15C7.77614 15 8 14.7761 8 14.5V12.5ZM10.682 10.682C10.8772 10.4867 11.1938 10.4867 11.3891 10.682L12.8033 12.0962C12.9986 12.2915 12.9986 12.608 12.8033 12.8033C12.608 12.9986 12.2915 12.9986 12.0962 12.8033L10.682 11.3891C10.4867 11.1938 10.4867 10.8772 10.682 10.682ZM5.5 7.5C5.5 6.39543 6.39543 5.5 7.5 5.5C8.60457 5.5 9.5 6.39543 9.5 7.5C9.5 8.60457 8.60457 9.5 7.5 9.5C6.39543 9.5 5.5 8.60457 5.5 7.5ZM7.5 4.5C5.84315 4.5 4.5 5.84315 4.5 7.5C4.5 9.15685 5.84315 10.5 7.5 10.5C9.15685 10.5 10.5 9.15685 10.5 7.5C10.5 5.84315 9.15685 4.5 7.5 4.5Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+						</svg>
+					</summary>
+					<div class="SelectMenu right-0">
+						<div class="SelectMenu-modal w-auto">
+							<div id="js-themes" class="SelectMenu-list js-themes">
+								<button data-scheme="light" class="SelectMenu-item is-active" role="menuitem">
+									Light Mode <span class="tag ml-5 tag--dark  cycle">active</span>
+								</button>
+								<button data-scheme="dark" class="SelectMenu-item" role="menuitem">
+									Dark Mode <span class="tag ml-5 tag--dark  cycle">active</span>
+								</button>
+								<button data-scheme="system" class="SelectMenu-item" role="menuitem">
+									System <span class="tag ml-5 tag--dark  cycle ">active</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</details>
+			</nav>
+
+<i class="fa fa-bars d-md-none cursor-pointer" data-as-offcanvas="mobile-menu"></i>
+
+		</div>
+	</header>
+
+<div class="offcanvas offcanvas-left" id="mobile-menu">
+<div class="offcanvas-header justify-end cursor-pointer">
+<!-- <h5 class="offcanvas-title mt-0 mb-0">Offcanvas</h5> -->
+<svg data-as-offcanvas="mobile-menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 16 16" class="octicon octicon-x cursor-pointer" aria-hidden="true" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg>
+</div>
+<div class="offcanvas-body">
+<a class="logo-text" title="Astral.CSS" href="../../../../index.html">
+	<p>Astral.CSS</p>
+</a>
+<div class="tag-group justify-content-center has-addons mb-3">
+	<span class="tag tag--dark">Astral.CSS</span>
+	<span class="tag tag--info">v.3.1</span>
+	</div>
+<div class="d-flex justify-content-center">
+	<details class="details-reset details-overlay">
+		<summary id="js-cycle" aria-haspopup="true">
+		<svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 cursor-pointer h-4"><path d="M7.5 0C7.77614 0 8 0.223858 8 0.5V2.5C8 2.77614 7.77614 3 7.5 3C7.22386 3 7 2.77614 7 2.5V0.5C7 0.223858 7.22386 0 7.5 0ZM2.1967 2.1967C2.39196 2.00144 2.70854 2.00144 2.90381 2.1967L4.31802 3.61091C4.51328 3.80617 4.51328 4.12276 4.31802 4.31802C4.12276 4.51328 3.80617 4.51328 3.61091 4.31802L2.1967 2.90381C2.00144 2.70854 2.00144 2.39196 2.1967 2.1967ZM0.5 7C0.223858 7 0 7.22386 0 7.5C0 7.77614 0.223858 8 0.5 8H2.5C2.77614 8 3 7.77614 3 7.5C3 7.22386 2.77614 7 2.5 7H0.5ZM2.1967 12.8033C2.00144 12.608 2.00144 12.2915 2.1967 12.0962L3.61091 10.682C3.80617 10.4867 4.12276 10.4867 4.31802 10.682C4.51328 10.8772 4.51328 11.1938 4.31802 11.3891L2.90381 12.8033C2.70854 12.9986 2.39196 12.9986 2.1967 12.8033ZM12.5 7C12.2239 7 12 7.22386 12 7.5C12 7.77614 12.2239 8 12.5 8H14.5C14.7761 8 15 7.77614 15 7.5C15 7.22386 14.7761 7 14.5 7H12.5ZM10.682 4.31802C10.4867 4.12276 10.4867 3.80617 10.682 3.61091L12.0962 2.1967C12.2915 2.00144 12.608 2.00144 12.8033 2.1967C12.9986 2.39196 12.9986 2.70854 12.8033 2.90381L11.3891 4.31802C11.1938 4.51328 10.8772 4.51328 10.682 4.31802ZM8 12.5C8 12.2239 7.77614 12 7.5 12C7.22386 12 7 12.2239 7 12.5V14.5C7 14.7761 7.22386 15 7.5 15C7.77614 15 8 14.7761 8 14.5V12.5ZM10.682 10.682C10.8772 10.4867 11.1938 10.4867 11.3891 10.682L12.8033 12.0962C12.9986 12.2915 12.9986 12.608 12.8033 12.8033C12.608 12.9986 12.2915 12.9986 12.0962 12.8033L10.682 11.3891C10.4867 11.1938 10.4867 10.8772 10.682 10.682ZM5.5 7.5C5.5 6.39543 6.39543 5.5 7.5 5.5C8.60457 5.5 9.5 6.39543 9.5 7.5C9.5 8.60457 8.60457 9.5 7.5 9.5C6.39543 9.5 5.5 8.60457 5.5 7.5ZM7.5 4.5C5.84315 4.5 4.5 5.84315 4.5 7.5C4.5 9.15685 5.84315 10.5 7.5 10.5C9.15685 10.5 10.5 9.15685 10.5 7.5C10.5 5.84315 9.15685 4.5 7.5 4.5Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+		</svg>
+		</summary>
+		<div class="SelectMenu">
+		<div class="SelectMenu-modal w-auto">
+			<div id="js-themes" class="SelectMenu-list js-themes">
+			<button data-scheme="light" class="SelectMenu-item" role="menuitem">
+				Light Mode <span class="tag tag--dark ml-5 cycle">active</span>
+			</button>
+			<button data-scheme="dark" class="SelectMenu-item is-active" role="menuitem">
+				Dark Mode <span class="tag ml-5 tag--dark cycle">active</span>
+			</button>
+			<button data-scheme="system" class="SelectMenu-item" role="menuitem">
+				System <span class="tag ml-5 tag--dark cycle ">active</span>
+			</button>
+			</div>
+		</div>
+		</div>
+	</details>
+	</div>
+
+    <details class="astral-has4u">
+        <summary class="astral-has4u">
+            <span class="large astral-has4u">Get Started</span>
+            <svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+                </path>
+            </svg>
+        </summary>
+        <ul class="astral-has4u">
+            <li class="astral-has4u">
+                <a href="../../../documentation/get-started/introduction/get-started.html"
+                    class="astral-has4u">
+
+                    Introduction
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/get-started/download/download.html" class="astral-has4u">
+                    Download
+
+                </a>
+            </li>
+
+
+        </ul>
+    </details>
+
+    <details class="astral-has4u">
+        <summary class="astral-has4u">
+            <span class="large astral-has4u">Layout</span>
+            <svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+                </path>
+            </svg>
+        </summary>
+        <ul class="astral-has4u">
+            <li class="astral-has4u">
+                <a href="../../../documentation/layout/breakpoints/breakpoints.html" class="astral-has4u">
+
+                    Breakpoints
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/layout/grid/grid.html" class="astral-has4u">
+                    Grid
+
+                </a>
+            </li>
+
+
+        </ul>
+    </details>
+
+    <details class="astral-has4u">
+        <summary class="astral-has4u">
+            <span class="large astral-has4u">Form</span>
+            <svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+                </path>
+            </svg>
+        </summary>
+        <ul class="astral-has4u">
+            <li class="astral-has4u">
+                <a href="../../../documentation/form/overview/form-overview.html" class="astral-has4u">
+
+                    Form Overview
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/form/form control/form-control.html" class="astral-has4u">
+                    Form Control
+
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/form/form layouts/form-layouts.html" class="astral-has4u">
+                    Form Layout
+
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/form/select/form-select.html" class="astral-has4u">
+                    Select
+
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/form/input group/input-groups.html" class="astral-has4u">
+                    Input Group
+
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/form/range/form-range.html" class="astral-has4u">
+                    Range
+
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/form/check and radio/checkboxes-and-radios.html"
+                    class="astral-has4u">
+                    Checkbox and Radio
+
+                </a>
+            </li>
+
+
+
+
+
+        </ul>
+    </details>
+
+    <details class="astral-has4u">
+        <summary class="astral-has4u">
+            <span class="large astral-has4u">Components</span>
+            <svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+                </path>
+            </svg>
+        </summary>
+        <ul class="astral-has4u">
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/alert/alerts.html" class="astral-has4u">
+
+                    Alerts
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/animation/animations.html" class="astral-has4u">
+
+                    Animations
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/article/articles.html" class="astral-has4u">
+
+                    Article
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/avatar/avatar.html" class="astral-has4u">
+
+                    Avatar
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/blog/blog.html" class="astral-has4u">
+
+                    Blog
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/breadcrumbs/breadcrumbs.html"
+                    class="astral-has4u">
+
+                    Breadcrumbs
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/button/buttons.html" class="astral-has4u">
+
+                    Buttons
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/cards/cards.html" class="astral-has4u">
+
+                    Cards
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/chips/chips.html" class="astral-has4u">
+
+                    Chips
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/contact/contact.html" class="astral-has4u">
+
+                    Contact
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/divider/dividers.html" class="astral-has4u">
+
+                    Dividers
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/dropdown/dropdown.html" class="astral-has4u">
+
+                    Dropdown
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/eccomerce/eccomerce.html" class="astral-has4u">
+
+                    Eccomerce
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/email/email.html" class="astral-has4u">
+
+                    Email
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/footer/footers.html" class="astral-has4u">
+
+                    Footers
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/hero/hero.html" class="astral-has4u">
+
+                    Hero
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/message/message.html" class="astral-has4u">
+
+                    Screen Alerts
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/modal/modals.html" class="astral-has4u">
+
+                    Modals
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/navigation/navigation.html" class="astral-has4u">
+                    Navs and Navbars
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/offcanvas/offcanvas.html" class="astral-has4u">
+                    Offcanvas
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/pagination/pagination.html" class="astral-has4u">
+
+                    Pagination
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/progress bar/progressbars.html"
+                    class="astral-has4u">
+
+                    Progress Bars and Spinners
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/section/sections.html" class="astral-has4u">
+
+                    Section
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/statistic/statistic.html" class="astral-has4u">
+
+                    Statistic
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/table/tables.html" class="astral-has4u">
+
+                    Tables
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/tags/tags.html" class="astral-has4u">
+
+                    Tags
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/team/team.html" class="astral-has4u">
+
+                    Team
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/testimonial/testimonial.html" class="astral-has4u">
+
+                    Testimonial
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/toast-static/toast-static.html"
+                    class="astral-has4u">
+
+                    Toast Static
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/components/tooltip/tooltips.html" class="astral-has4u">
+
+                    Tool tips
+                </a>
+            </li>
+
+
+
+
+
+
+
+        </ul>
+    </details>
+
+    <details class="astral-has4u">
+        <summary class="astral-has4u">
+            <span class="large astral-has4u">Utilities</span>
+            <svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+                </path>
+            </svg>
+        </summary>
+        <ul class="astral-has4u">
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/background/background.html" class="astral-has4u">
+
+                    Background
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/colors/colors.html" class="astral-has4u">
+                    Colors
+
+                </a>
+            </li>
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/cursors/cursor-pointers.html"
+                    class="astral-has4u">
+
+                    Cursor Pointers
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/display/display.html" class="astral-has4u">
+                    Display
+
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/flex/flex.html" class="astral-has4u">
+
+                    Flex
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/floats/float.html" class="astral-has4u">
+                    CSS Floats
+
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/interaction/interactions.html"
+                    class="astral-has4u">
+
+                    User Interactions
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/opacity/opacity.html" class="astral-has4u">
+                    Opacity
+
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/overflow/overflow.html" class="astral-has4u">
+                    Overflow
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/position/position.html" class="astral-has4u">
+                    Position
+
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/shadow/shadow.html" class="astral-has4u">
+
+                    Shadow
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/sizes/sizes.html" class="astral-has4u">
+                    Height and Widths
+
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/spacing/spacing.html" class="astral-has4u">
+
+                    Padding and Margin
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/text/text.html" class="astral-has4u">
+                    Text Semantics
+
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/typography/typography.html" class="astral-has4u">
+
+                    Typography
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/vertical alignment/vertical-align.html"
+                    class="astral-has4u">
+                    Vertical Alignment
+
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/utilities/visibility/visibility.html" class="astral-has4u">
+
+                    Visibility
+                </a>
+            </li>
+
+
+
+
+
+        </ul>
+    </details>
+
+    <details class="astral-has4u">
+        <summary class="astral-has4u">
+            <span class="large astral-has4u">JavaScript</span>
+            <svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+                </path>
+            </svg>
+        </summary>
+        <ul class="astral-has4u">
+            <li class="astral-has4u">
+                <a href="../../../documentation/javascript/toast/toastify.html" class="astral-has4u">
+                    Toastify
+                </a>
+            </li>
+
+            <li class="astral-has4u">
+                <a href="../../../documentation/javascript/otp generator/otp-generator.html"
+                    class="astral-has4u">
+                    OTP Generator
+                </a>
+            </li>
+
+
+        </ul>
+    </details>
+
+    <details class="astral-has4u">
+        <summary class="astral-has4u">
+            <span class="large astral-has4u">Theme</span>
+            <svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+                </path>
+            </svg>
+        </summary>
+        <ul class="astral-has4u">
+            <li class="astral-has4u">
+                <a href="../../../documentation/dark mode/dark-mode.html" class="astral-has4u">
+                    Dark Mode
+                </a>
+            </li>
+        </ul>
+    </details>
+
+
+</div>
+
+<div class="border-t">
+<div class="anim-pulse text-center p-2">
+	Astral.CSS is amazing! 🚀
+	</div>
+</div>
+</div>
+
+<div class="flex flex-col md:flex-row">
+		<aside class="sidebar-container hidden d-md-block">
+			<div class="sidebar-list w-lg-64">
+				<a class="logo-text" title="Astral.CSS" href="../../../../index.html">
+					<p class="mt-2">Astral.CSS</p>
+				</a>
+				<div class="tag-group justify-content-center has-addons mb-4">
+					<span class="tag tag--dark">Astral.CSS</span>
+					<span class="tag tag--info">v.3.1</span>
+				</div>
+				<details class="astral-has4u">
+					<summary class="astral-has4u">
+						<span class="large astral-has4u">Get Started</span>
+						<svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+							viewBox="0 0 24 24" fill="currentColor">
+							<path
+								d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+							</path>
+						</svg>
+					</summary>
+					<ul class="astral-has4u">
+						<li class="astral-has4u">
+							<a href="../../../documentation/get-started/introduction/get-started.html"
+								class="astral-has4u">
+
+								Introduction
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/get-started/download/download.html" class="astral-has4u">
+								Download
+
+							</a>
+						</li>
+
+
+					</ul>
+				</details>
+
+				<details class="astral-has4u">
+					<summary class="astral-has4u">
+						<span class="large astral-has4u">Layout</span>
+						<svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+							viewBox="0 0 24 24" fill="currentColor">
+							<path
+								d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+							</path>
+						</svg>
+					</summary>
+					<ul class="astral-has4u">
+						<li class="astral-has4u">
+							<a href="../../../documentation/layout/breakpoints/breakpoints.html" class="astral-has4u">
+
+								Breakpoints
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/layout/grid/grid.html" class="astral-has4u">
+								Grid
+
+							</a>
+						</li>
+
+
+					</ul>
+				</details>
+
+				<details class="astral-has4u">
+					<summary class="astral-has4u">
+						<span class="large astral-has4u">Form</span>
+						<svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+							viewBox="0 0 24 24" fill="currentColor">
+							<path
+								d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+							</path>
+						</svg>
+					</summary>
+					<ul class="astral-has4u">
+						<li class="astral-has4u">
+							<a href="../../../documentation/form/overview/form-overview.html" class="astral-has4u">
+
+								Form Overview
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/form/form control/form-control.html" class="astral-has4u">
+								Form Control
+
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/form/form layouts/form-layouts.html" class="astral-has4u">
+								Form Layout
+
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/form/select/form-select.html" class="astral-has4u">
+								Select
+
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/form/input group/input-groups.html" class="astral-has4u">
+								Input Group
+
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/form/range/form-range.html" class="astral-has4u">
+								Range
+
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/form/check and radio/checkboxes-and-radios.html"
+								class="astral-has4u">
+								Checkbox and Radio
+
+							</a>
+						</li>
+
+
+
+
+
+					</ul>
+				</details>
+
+				<details class="astral-has4u">
+					<summary class="astral-has4u">
+						<span class="large astral-has4u">Components</span>
+						<svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+							viewBox="0 0 24 24" fill="currentColor">
+							<path
+								d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+							</path>
+						</svg>
+					</summary>
+					<ul class="astral-has4u">
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/alert/alerts.html" class="astral-has4u">
+
+								Alerts
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/animation/animations.html" class="astral-has4u">
+
+								Animations
+							</a>
+						</li>
+                        <li class="astral-has4u">
+							<a href="../../../documentation/components/article/articles.html" class="astral-has4u">
+
+								Article
+							</a>
+						</li>
+                        <li class="astral-has4u">
+							<a href="../../../documentation/components/avatar/avatar.html" class="astral-has4u">
+
+								Avatar
+							</a>
+						</li>
+                        <li class="astral-has4u">
+							<a href="../../../documentation/components/blog/blog.html" class="astral-has4u">
+
+								Blog
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/breadcrumbs/breadcrumbs.html"
+								class="astral-has4u">
+
+								Breadcrumbs
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/button/buttons.html" class="astral-has4u">
+
+								Buttons
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/cards/cards.html" class="astral-has4u">
+
+								Cards
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/chips/chips.html" class="astral-has4u">
+
+								Chips
+							</a>
+						</li>
+                        <li class="astral-has4u">
+							<a href="../../../documentation/components/contact/contact.html" class="astral-has4u">
+
+								Contact
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/divider/dividers.html" class="astral-has4u">
+
+								Dividers
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/dropdown/dropdown.html" class="astral-has4u">
+
+								Dropdown
+							</a>
+						</li>
+                        <li class="astral-has4u">
+							<a href="../../../documentation/components/eccomerce/eccomerce.html" class="astral-has4u">
+
+								Eccomerce
+							</a>
+						</li>
+                        <li class="astral-has4u">
+							<a href="../../../documentation/components/email/email.html" class="astral-has4u">
+
+								Email
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/footer/footers.html" class="astral-has4u">
+
+								Footers
+							</a>
+						</li>
+                        <li class="astral-has4u">
+							<a href="../../../documentation/components/hero/hero.html" class="astral-has4u">
+
+								Hero
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/message/message.html" class="astral-has4u">
+
+								Screen Alerts
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/modal/modals.html" class="astral-has4u">
+
+								Modals
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/navigation/navigation.html" class="astral-has4u">
+								Navs and Navbars
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/offcanvas/offcanvas.html" class="astral-has4u">
+								Offcanvas
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/pagination/pagination.html" class="astral-has4u">
+
+								Pagination
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/progress bar/progressbars.html"
+								class="astral-has4u">
+
+								Progress Bars and Spinners
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/section/sections.html" class="astral-has4u">
+
+								Section
+							</a>
+						</li>
+                        <li class="astral-has4u">
+							<a href="../../../documentation/components/statistic/statistic.html" class="astral-has4u">
+
+								Statistic
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/table/tables.html" class="astral-has4u">
+
+								Tables
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/tags/tags.html" class="astral-has4u">
+
+								Tags
+							</a>
+						</li>
+                        <li class="astral-has4u">
+							<a href="../../../documentation/components/team/team.html" class="astral-has4u">
+
+								Team
+							</a>
+						</li>
+                        <li class="astral-has4u">
+							<a href="../../../documentation/components/testimonial/testimonial.html" class="astral-has4u">
+
+								Testimonial
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/toast-static/toast-static.html"
+								class="astral-has4u">
+
+								Toast Static
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/components/tooltip/tooltips.html" class="astral-has4u">
+
+								Tool tips
+							</a>
+						</li>
+
+
+
+
+
+
+
+					</ul>
+				</details>
+
+				<details class="astral-has4u">
+					<summary class="astral-has4u">
+						<span class="large astral-has4u">Utilities</span>
+						<svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+							viewBox="0 0 24 24" fill="currentColor">
+							<path
+								d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+							</path>
+						</svg>
+					</summary>
+					<ul class="astral-has4u">
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/background/background.html" class="astral-has4u">
+
+								Background
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/colors/colors.html" class="astral-has4u">
+								Colors
+
+							</a>
+						</li>
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/cursors/cursor-pointers.html"
+								class="astral-has4u">
+
+								Cursor Pointers
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/display/display.html" class="astral-has4u">
+								Display
+
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/flex/flex.html" class="astral-has4u">
+
+								Flex
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/floats/float.html" class="astral-has4u">
+								CSS Floats
+
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/interaction/interactions.html"
+								class="astral-has4u">
+
+								User Interactions
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/opacity/opacity.html" class="astral-has4u">
+								Opacity
+
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/overflow/overflow.html" class="astral-has4u">
+								Overflow
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/position/position.html" class="astral-has4u">
+								Position
+
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/shadow/shadow.html" class="astral-has4u">
+
+								Shadow
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/sizes/sizes.html" class="astral-has4u">
+								Height and Widths
+
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/spacing/spacing.html" class="astral-has4u">
+
+								Padding and Margin
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/text/text.html" class="astral-has4u">
+								Text Semantics
+
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/typography/typography.html" class="astral-has4u">
+
+								Typography
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/vertical alignment/vertical-align.html"
+								class="astral-has4u">
+								Vertical Alignment
+
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/utilities/visibility/visibility.html" class="astral-has4u">
+
+								Visibility
+							</a>
+						</li>
+
+
+
+
+
+					</ul>
+				</details>
+
+				<details class="astral-has4u">
+					<summary class="astral-has4u">
+						<span class="large astral-has4u">JavaScript</span>
+						<svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+							viewBox="0 0 24 24" fill="currentColor">
+							<path
+								d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+							</path>
+						</svg>
+					</summary>
+					<ul class="astral-has4u">
+						<li class="astral-has4u">
+							<a href="../../../documentation/javascript/toast/toastify.html" class="astral-has4u">
+								Toastify
+							</a>
+						</li>
+
+						<li class="astral-has4u">
+							<a href="../../../documentation/javascript/otp generator/otp-generator.html"
+								class="astral-has4u">
+								OTP Generator
+							</a>
+						</li>
+
+
+					</ul>
+				</details>
+
+				<details class="astral-has4u">
+					<summary class="astral-has4u">
+						<span class="large astral-has4u">Theme</span>
+						<svg aria-hidden="true" class="caret astral-has4u astral-445ym5ac" width="16" height="16"
+							viewBox="0 0 24 24" fill="currentColor">
+							<path
+								d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z">
+							</path>
+						</svg>
+					</summary>
+					<ul class="astral-has4u">
+						<li class="astral-has4u">
+							<a href="../../../documentation/dark mode/dark-mode.html" class="astral-has4u">
+								Dark Mode
+							</a>
+						</li>
+
+
+
+
+					</ul>
+				</details>
+			</div>
+
+			<div class="border-t">
+				<div class="anim-pulse text-center p-2">
+					Astral.CSS is amazing! 🚀
+				</div>
+			</div>
+
+
+
+		</aside>
+
+  <div class="docs-content">
+    <div class="container px-4">
+  
+         
+        <h1 class="headline">Modal</h1>
+        <h4 class="fs-4"><p>A classic <strong>modal</strong> overlay, in which you can include <em>any</em> content you want!</p></h4>
+
+
+        <p>The modal structure is very simple:</p>
+   
+          <code>modal-overlay</code>: a transparent overlay for the modal.
+    
+     
+        <ul>
+          <li>
+            <code>modal</code>: the main container
+            <ul class="ml-6" style="list-style: circle;">
+              <li>
+                <code>modal-content</code>: a horizontally and vertically centered container, with a maximum width of 55% by default, in which you can include <em>any</em> content.
+              </li>
+              <li>
+                <code>close-button</code>: a simple cross located in the top right corner.
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+
+<h3 id="form-modal">Form Modal</h3>
+<div class="panel">
+  <button class="js-modal-trigger button " data-as-modal="modal-form">
+    Open form modal
+    </button>
+    <div id="modal-form" class="modal">
+      <div class="modal-card">
+        <header class="modal-header">
+          <h2 class="modal-title">Sign up</h2>
+          <span class="close-button" data-as-modal="modal-form"></span>
+        </header>
+      <section class="modal-content">
+      <div class="modal-body">
+        <form>
+          <div class="form-field">
+            <label class="form-label">Name</label>
+            <input class="form-input" type="text" placeholder="Text input">      
+          </div>
+          <div class="form-field">
+            <label class="form-label">Username</label>
+            <input class="form-input" type="text" placeholder="Text input" value="Astral">
+          </div>
+          <div class="form-field">
+            <label class="form-label">Email</label>
+            <input class="form-input " type="text" placeholder="Text input" value="something@gmail.com">
+          </div>
+          <div class="form-field">
+            <label class="form-label">Password</label>
+            <input class="form-input " type="password" placeholder="*********" value="123456">
+          </div>
+          <div class="form-field">
+            <select class="form-select">
+              <option>Select dropdown</option>
+              <option>With options</option>
+              <option>With options</option>
+              <option>With options</option>
+              <option>With options</option>
+              <option>With options</option>
+            </select>
+         </div>
+         <div class="form-field">
+           <label class="form-label">Message</label>
+           <textarea class="form-input" placeholder="Astral.CSS : Craft Beautiful Web Interfaces, One Class at a Time." rows="10"></textarea>
+         </div>
+         <div class="form-field">
+           <label class="form-check-label">
+           <input type="checkbox" class="form-check-input">I agree to the <a href="#">terms and conditions</a></label>
+         </div>
+      </form>
+    </div>
+    </section>
+       <footer class="modal-footer">
+         <button type="submit" class="button button-primary">Submit</button>
+        </footer>
+      </div>
+    </div>
+</div>
+
+    
+
+<figure class="highlight"><pre><code data-language="html">
+<button class="js-modal-trigger button " data-as-modal="modal-form">
+  Open form modal
+</button>
+<div id="modal-form" class="modal">
+  <div class="modal-card">
+    <header class="modal-header">
+      <h2 class="modal-title">Sign up</h2>
+      <span class="close-button" data-as-modal="modal-form"></span>
+    </header>
+    <section class="modal-content">
+      <div class="modal-body">
+        <form>
+          <div class="form-field">
+            <label class="form-label">Name</label>
+            <input class="form-input" type="text" placeholder="Text input">
+          </div>
+          <div class="form-field">
+            <label class="form-label">Username</label>
+            <input class="form-input" type="text" placeholder="Text input" value="Astral">
+          </div>
+          <div class="form-field">
+            <label class="form-label">Email</label>
+            <input class="form-input " type="text" placeholder="Text input" value="something@gmail.com">
+          </div>
+          <div class="form-field">
+            <label class="form-label">Password</label>
+            <input class="form-input " type="password" placeholder="*********" value="123456">
+          </div>
+          <div class="form-field">
+            <select class="form-select">
+              <option>Select dropdown</option>
+              <option>With options</option>
+              <option>With options</option>
+              <option>With options</option>
+              <option>With options</option>
+              <option>With options</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label class="form-label">Message</label>
+            <textarea class="form-input" placeholder="Astral.CSS : Craft Beautiful Web Interfaces, One Class at a Time."
+              rows="10"></textarea>
+          </div>
+          <div class="form-field">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">I agree to the <a href="#">terms and
+                conditions</a></label>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer class="modal-footer">
+      <button type="submit" class="button button-primary">Submit</button>
+    </footer>
+  </div>
+</div>
+</code></pre>
+<button data-clipboard-snippet class="button bd-copy"><i class="fa fa-copy p-1"></i></button>	
+</figure>
+
+
+<div class="panel">
+  <button class="js-modal-trigger button " data-as-modal="modal-js-example">
+    Open section modal example
+  </button>
+  
+  <div id="modal-js-example" class="modal">
+    
+    <div class="modal-card">
+      <header class="modal-header">
+        <h2 class="modal-title">Modal title</h2>
+        <span class="close-button" data-as-modal="modal-js-example"></span>
+      </header>
+      <section class="modal-content">
+   <div class="modal-body">
+    <h2>What Are Modals?</h2>
+  <p>Modals are overlay windows that appear on top of a web page, dimming the background content to focus the user's attention on the modal content. They are typically triggered by user interactions, such as clicking a button or a link. Unlike standard web pages, modals require user engagement to close them—either by clicking a designated close button, clicking outside the modal, or selecting an option within the modal itself.</p>
+  <h2>Benefits of Using Modals</h2>
+  <p>Modals draw attention to specific information or actions, minimizing distractions from the main content. This focus can be particularly useful for critical alerts, confirmations, or forms.</p>
+  <ul>
+    <li>By using modals, developers can create interactive experiences without forcing users to navigate away from their current tasks. This seamless interaction can improve user engagement and retention.</li>
+    <li>Modals can efficiently present additional information, such as product details or image galleries, without cluttering the main page. This allows users to access relevant content easily and quickly.</li>
+    <li> Modals are ideal for notifying users of errors or confirming actions, such as deleting an item or completing a purchase. By requiring user confirmation, modals help prevent accidental actions and enhance the overall user experience.</li>
+    <li>Modals can be designed to be responsive, adapting to various screen sizes and orientations. This ensures a consistent user experience across devices, from desktops to mobile phones.</li>
+  </ul>
+  <h3>Common Types of Modals</h3>
+  <ol>
+    <li>Information Modals: These provide users with important information or updates, such as terms of service, privacy policies, or announcements. Information modals are often used for onboarding new users or displaying site-wide notifications.</li>
+    <li>Confirmation Modals: These require user confirmation before proceeding with an action, such as deleting an account or confirming a purchase. They typically include options to either confirm or cancel the action.</li>
+    <li>Form Modals: These allow users to fill out forms without leaving the current page. Form modals are useful for tasks such as signing up for a newsletter or submitting feedback.</li>
+    <li>These display images, videos, or other media in a focused view. Media modals are commonly used in galleries, allowing users to view larger versions of images without navigating away from the main content.</li>
+    <li>These alert users to issues or errors that need to be addressed. Error modals typically include a clear message about the problem and provide actionable steps for resolution.</li>
+  </ol>
+   </div>
+      </section>
+      <footer class="modal-footer">
+        <div class="buttons">
+          <button class="button button-success">Save changes</button>
+          <button class="button button-error">Cancel</button>
+        </div>
+  
+      </footer>
+    </div>
+  </div>  
+</div>
+
+
+<figure class="highlight"><pre><code data-language="html">
+<button class="js-modal-trigger button " data-as-modal="modal-js-example">
+  Open section modal example
+</button>
+<div id="modal-js-example" class="modal">
+
+  <div class="modal-card">
+    <header class="modal-header">
+      <h2 class="modal-title">Modal title</h2>
+      <span class="close-button" data-as-modal="modal-js-example"></span>
+    </header>
+    <section class="modal-content">
+      <div class="modal-body">
+        <h2>What Are Modals?</h2>
+        <p>Modals are overlay windows that appear on top of a web page, dimming the background content to focus the
+          user's attention on the modal content. They are typically triggered by user interactions, such as clicking a
+          button or a link. Unlike standard web pages, modals require user engagement to close them—either by clicking a
+          designated close button, clicking outside the modal, or selecting an option within the modal itself.</p>
+        <h2>Benefits of Using Modals</h2>
+        <p>Modals draw attention to specific information or actions, minimizing distractions from the main content. This
+          focus can be particularly useful for critical alerts, confirmations, or forms.</p>
+        <ul>
+          <li>By using modals, developers can create interactive experiences without forcing users to navigate away from
+            their current tasks. This seamless interaction can improve user engagement and retention.</li>
+          <li>Modals can efficiently present additional information, such as product details or image galleries, without
+            cluttering the main page. This allows users to access relevant content easily and quickly.</li>
+          <li> Modals are ideal for notifying users of errors or confirming actions, such as deleting an item or
+            completing a purchase. By requiring user confirmation, modals help prevent accidental actions and enhance
+            the overall user experience.</li>
+          <li>Modals can be designed to be responsive, adapting to various screen sizes and orientations. This ensures a
+            consistent user experience across devices, from desktops to mobile phones.</li>
+        </ul>
+        <h3>Common Types of Modals</h3>
+        <ol>
+          <li>Information Modals: These provide users with important information or updates, such as terms of service,
+            privacy policies, or announcements. Information modals are often used for onboarding new users or displaying
+            site-wide notifications.</li>
+          <li>Confirmation Modals: These require user confirmation before proceeding with an action, such as deleting an
+            account or confirming a purchase. They typically include options to either confirm or cancel the action.
+          </li>
+          <li>Form Modals: These allow users to fill out forms without leaving the current page. Form modals are useful
+            for tasks such as signing up for a newsletter or submitting feedback.</li>
+          <li>These display images, videos, or other media in a focused view. Media modals are commonly used in
+            galleries, allowing users to view larger versions of images without navigating away from the main content.
+          </li>
+          <li>These alert users to issues or errors that need to be addressed. Error modals typically include a clear
+            message about the problem and provide actionable steps for resolution.</li>
+        </ol>
+      </div>
+    </section>
+    <footer class="modal-footer">
+      <div class="buttons">
+        <button class="button button-success">Save changes</button>
+        <button class="button button-error">Cancel</button>
+      </div>
+
+    </footer>
+  </div>
+</div>
+  </code></pre>
+  <button data-clipboard-snippet class="button bd-copy"><i class="fa fa-copy p-1"></i></button>	
+  </figure>
+
+  
+
+
+  
+    
+  
+  
+ 
+  
+  
+
+<nav class="pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="../../../../documentation/components/message/message.html"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Screen Alerts</div></a><a class="pagination-nav__link pagination-nav__link--next" href="../../../../documentation/components/navigation/navigation.html"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Navigation</div></a></nav>
+  
+   
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="container d-flex  py-3 align-items-center justify-content-center">
+      <p class="mb-0">Designed and built with <span class="text-error fs-4">♥</span> by <a style="text-decoration: underline !important;" class="text-gray-200 text-gray-500" href="https://twitter.com/aluya_rume" target="_blank" rel="noopener">Rume Aluya</a>.</p>
+      </div>
+
+</div>
+<div class="toc-container hidden d-lg-block">
+  <ul class="list-unstyled table-content w-lg-64 mt-4 ">
+    <h2 class="fs-5">
+      On this page
+    </h2>
+    <li><a href="#form-modal">Form Modal</a></li>
+    <li><a href="#section-modal">Section Modal</a></li>
+    </ul>
+  </div>
+
+</div> 
+
+
+
+
+
+
+<button id="scroll-top" aria-label="Scroll to top" class="show">
+	<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+</button><script src="../../../js/docs.js"></script>
+<script src="../../../js/rainbow.min.js"></script>
+<script src="../../../js/clipboard.min.js"></script>
+<script src="../../../js/snippet.js"></script>
+
+</body>
+</html>
